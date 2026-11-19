@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ヒト文 // 日本語AI文章チェッカー＆自然化リライター</title>
+<title>ヒト文 / HITOBUN｜日本語AI文章チェッカー＆自然化リライター（無料・登録不要）</title>
+<meta name="description" content="レポート・就活ES・感想文の「AIっぽさ」をブラウザ完結で無料診断＆自然化リライト。入力データは外部サーバーに一切送信されない安心設計の日本語文章チェッカーです。">
 <style>
   :root {
     --bg: #0c1118;
@@ -26,6 +27,14 @@
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
     line-height: 1.65;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 
   header {
@@ -163,17 +172,17 @@
     display: block;
   }
 
-  main {
+  .tool-grid {
     max-width: 1320px;
-    margin: 22px auto;
-    padding: 0 20px 60px;
+    margin: 22px auto 0;
+    padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
   @media (max-width: 960px) {
-    main { grid-template-columns: 1fr; }
+    .tool-grid { grid-template-columns: 1fr; }
   }
 
   .card {
@@ -415,6 +424,97 @@
     font-size: 12px;
     color: #bae6fd;
   }
+
+  /* ホームページ用情報セクション */
+  .info-container {
+    max-width: 1320px;
+    margin: 36px auto 0;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 960px) {
+    .info-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+  }
+
+  .info-card h2 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .info-card h3 {
+    margin: 14px 0 6px;
+    font-size: 14px;
+    color: var(--text);
+  }
+
+  .info-card p, .info-card li {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.75;
+    margin: 0 0 8px;
+  }
+
+  .info-card ul, .info-card ol {
+    padding-left: 20px;
+    margin: 0;
+  }
+
+  .step-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #071018;
+    background: var(--accent);
+    padding: 1px 8px;
+    border-radius: 999px;
+    margin-bottom: 6px;
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (max-width: 960px) {
+    .policy-grid { grid-template-columns: 1fr; }
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 22px 20px 36px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
 </style>
 </head>
 <body>
@@ -445,7 +545,7 @@
   </div>
 </header>
 
-<main>
+<main class="tool-grid">
   <section class="card">
     <div class="card-title">
       <div class="title-left">
@@ -569,6 +669,86 @@
     </div>
   </section>
 </main>
+
+<!-- ホームページ用コンテンツ（使い方・解説・ポリシー・免責事項） -->
+<section class="info-container" id="guide">
+  <div class="info-card">
+    <h2>ヒト文 / HITOBUN とは？</h2>
+    <p>
+      「ヒト文（HITOBUN）」は、大学のレポート・就職活動のエントリーシート（ES）・感想文・Web記事などの日本語テキストに含まれる<strong>「AI生成文特有の定型表現・構文のクセ・単調なリズム」</strong>を可視化し、自然な日本語へ整えるための無料Webツールです。
+    </p>
+    <p>
+      判定とリライト処理はすべてお使いのブラウザ内（JavaScriptのルールベースエンジン）で完結します。入力した文章が外部サーバーへ送信・保存されたり、AIの学習データに利用されたりすることはありません。
+    </p>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <span class="step-badge">STEP 1</span>
+      <h3>文章を貼り付けてジャンル・文体を選択</h3>
+      <p>
+        上の「入力テキスト」に下書きを貼り付け、「大学レポート重視」「就活ES重視」などの用途と、「だ・である調」「です・ます調」を選んで「診断＆自然化」を押します。
+      </p>
+    </div>
+
+    <div class="info-card">
+      <span class="step-badge">STEP 2</span>
+      <h3>ハイライトと改善候補でクセを確認</h3>
+      <p>
+        赤色（定型フレーズ）や黄色（接続詞の連続・二重表現など）のハイライトと、検出された改善候補カードを見ながら、どこに機械的な印象があるかを確認します。
+      </p>
+    </div>
+
+    <div class="info-card">
+      <span class="step-badge">STEP 3</span>
+      <h3>自分の体験・根拠を加えて再診断</h3>
+      <p>
+        自動整理された「自然化リライト案」をベースに、実験結果や自分の具体的な行動を書き足し、「入力に戻して再診断」で仕上がりをチェックして完成です。
+      </p>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h2>AIっぽい文章を自然な日本語に直す3つのポイント</h2>
+    <ul>
+      <li><strong>クッション言葉と抽象語を減らす：</strong>「〜と言えます」「多角的な視点から」「重要性が高まっています」などの定型句を減らし、具体的なデータや自分が実際に行った行動に置き換えると一気に人間らしい文章になります。</li>
+      <li><strong>文頭の接続詞を並べすぎない：</strong>「さらに、〜。また、〜。したがって、〜。」と毎文に接続詞がつくと機械的な印象になります。文脈でつながる箇所は接続詞を削るのが自然です。</li>
+      <li><strong>文の長さにリズムをつける：</strong>すべての文が40〜60文字前後で揃っていると単調に見えます。20文字前後の短い言い切りと、詳しい説明文を組み合わせることで読みやすさが向上します。</li>
+    </ul>
+  </div>
+
+  <div class="policy-grid" id="policy">
+    <div class="info-card">
+      <h2>プライバシーポリシー</h2>
+      <p>
+        <strong>1. 入力テキストの取り扱い：</strong>当サイト（ヒト文 / HITOBUN）に入力された文章データは、すべて利用者のブラウザ上でのみ処理されます。運営者のサーバーや外部APIへテキストデータが送信・保存されることは一切ありません。
+      </p>
+      <p>
+        <strong>2. アクセス解析・広告配信について：</strong>当サイトでは、サイト改善や運営維持のためにアクセス解析ツールや第三者配信の広告サービス（Google AdSense等）を利用する場合があります。これらのサービスでは、利用者の興味に応じた広告表示のためにCookieを使用することがありますが、個人を特定する情報は含まれません。
+      </p>
+    </div>
+
+    <div class="info-card" id="disclaimer">
+      <h2>免責事項・ご利用上の注意</h2>
+      <p>
+        <strong>1. 判定結果の目安について：</strong>当サイトの「AIっぽさ特徴スコア」は、定型表現や文体リズムの統計的傾向を算出するものであり、文章がAIによって生成されたか否かを法的に・技術的に断定するものではありません。
+      </p>
+      <p>
+        <strong>2. 提出・公開時の責任：</strong>リライト案の利用によって生じたトラブルや不利益について、運営者は一切の責任を負いかねます。大学レポートや選考書類として提出する際は、必ずご自身で事実関係・引用ルール・文脈の正確性をご確認ください。
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="#guide">使い方・解説</a>
+    <a href="#policy">プライバシーポリシー</a>
+    <a href="#disclaimer">免責事項</a>
+    <a href="https://github.com/yuga-lab/hitobun" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+  </div>
+  <div>© 2026 ヒト文 / HITOBUN (yuga-lab)</div>
+</footer>
 
 <script>
 const SAMPLES = [
